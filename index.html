@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent News Curator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar
+    <nav class="navbar">
+        <div class="logo">News Curator</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#trending">Trending</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button type="button" id="signup" onclick="window.location.href='signup.html'">Sign Up</button>
+            <button type="button" id="signin" onclick="window.location.href='signin.html'">Sign In</button>
+            <button type="button" id="logout" style="display: none;">Logout</button>
+            <button type="button" id="profile" style="display: none;" onclick="window.location.href='profile.html'">Profile</button>
+        </div>
+    </nav> -->
+
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">News Curator</div>
+    
+    <!-- Search bar in the center of the navbar -->
+    <div class="search-container">
+        <input type="text" placeholder="Search news..." class="search-bar">
+    </div>
+    
+    <!-- Trending button aligned to the right -->
+    <ul class="nav-links">
+        <li><a href="#trending">Trending</a></li>
+    </ul>
+
+    <!-- Authentication buttons -->
+    <div class="auth-buttons">
+        <button type="button" id="signup" onclick="window.location.href='signup.html'">Sign Up</button>
+        <button type="button" id="signin" onclick="window.location.href='signin.html'">Sign In</button>
+        <button type="button" id="logout" style="display: none;">Logout</button>
+        <button type="button" id="profile" style="display: none;" onclick="window.location.href='profile.html'">Profile</button>
+    </div>
+
+    <!-- Hamburger menu for mobile responsiveness -->
+    <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
+</nav>
+
+<!-- Category Slider -->
+<div class="category-slider">
+    <div class="categories">
+        <span>World</span>
+        <span>Business</span>
+        <span>Technology</span>
+        <span>Sports</span>
+        <span>Health</span>
+        <span>Entertainment</span>
+        <span>Science</span>
+        <span>Politics</span>
+    </div>
+</div>
+
+<!-- ======================================================================= main ===================== -->
+<!-- Navbar -->
+<!-- <nav class="navbar">
+    <div class="logo">News Curator</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#trending">Trending</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <button type="button" id="signup" onclick="window.location.href='signup.html'">Sign Up</button>
+        <button type="button" id="signin" onclick="window.location.href='signin.html'">Sign In</button>
+        <button type="button" id="logout" style="display: none;">Logout</button>
+        <button type="button" id="profile" style="display: none;" onclick="window.location.href='profile.html'">Profile</button>
+    </div>
+    <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
+</nav> -->
+
+<!-- <div class="top-bar">
+    <input type="text" placeholder="Search news..." class="search-bar">
+    <button class="trending-btn">Trending News</button>
+  </div>
+  <div class="category-slider">
+    <div class="categories">
+      <span>World</span>
+      <span>Business</span>
+      <span>Technology</span>
+      <span>Sports</span>
+      <span>Health</span>
+      <span>Entertainment</span>
+      <span>Science</span>
+      <span>Politics</span>
+    </div>
+  </div> -->
+<!-- ======================================================================= -->
+<!-- Sub Navbar for Categories -->
+<!-- <div class="sub-navbar">
+    <ul>
+        <li><a href="#sports">Sports</a></li>
+        <li><a href="#tech">Tech</a></li>
+        <li><a href="#entertainment">Entertainment</a></li>
+        <li><a href="#politics">Politics</a></li>
+        <li><a href="#business">Business</a></li>
+    </ul>
+</div> -->
+
+    <!-- Home Section -->
+    <section id="home" class="section hero">
+        <div class="hero-content">
+            <h1>Welcome to Intelligent News Curator</h1>
+            <p>Your personalized news aggregator, delivering the latest and most relevant content just for you!</p>
+        </div>
+    </section>
+
+    <!-- Live News Section -->
+    <section id="live-news" class="section">
+        <div class="section-header">
+            <h2>Live News</h2>
+            <p>Stay updated with the latest news from around the world.</p>
+        </div>
+        <div id="news-container" class="news-container">
+            <!-- News articles will be inserted here via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Static News Section -->
+    <section id="news" class="news-container">
+        <div class="news-article">
+            <h3>Breaking News: Major Earthquake Hits City</h3>
+            <p>A major earthquake struck the city early this morning, causing significant damage and prompting emergency responses.</p>
+            <button onclick="addToInterestedNews('Breaking News: Major Earthquake Hits City')">Add to Interested</button>
+        </div>
+        <div class="news-article">
+            <h3>Sports Update: Local Team Wins Championship</h3>
+            <p>The local team secured a thrilling victory in the championship match, bringing the trophy home.</p>
+            <button onclick="addToInterestedNews('Sports Update: Local Team Wins Championship')">Add to Interested</button>
+        </div>
+        <div class="news-article">
+            <h3>Technology: New Smartphone Released</h3>
+            <p>A new smartphone model has been released, featuring advanced technology and enhanced capabilities.</p>
+            <button onclick="addToInterestedNews('Technology: New Smartphone Released')">Add to Interested</button>
+        </div>
+        <div class="news-article">
+            <h3>Health: Tips for a Healthy Lifestyle</h3>
+            <p>Experts share tips on how to maintain a healthy lifestyle, including diet and exercise.</p>
+            <button onclick="addToInterestedNews('Health: Tips for a Healthy Lifestyle')">Add to Interested</button>
+        </div>
+        <div class="news-article">
+            <h3>Finance: Stock Market Trends</h3>
+            <p>The stock market has seen fluctuations this week, with analysts predicting future trends.</p>
+            <button onclick="addToInterestedNews('Finance: Stock Market Trends')">Add to Interested</button>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <!-- <section id="categories" class="section">
+        <div class="section-header">
+            <h2>News Categories</h2>
+            <p>Explore different categories of news tailored to your interests.</p>
+        </div>
+        <div class="category-list">
+            <div class="category-item">Technology</div>
+            <div class="category-item">Business</div>
+            <div class="category-item">Health</div>
+            <div class="category-item">Sports</div>
+            <div class="category-item">Entertainment</div>
+            <div class="category-item">World</div>
+        </div>
+    </section> -->
+
+    <!-- Trending Section -->
+    <!-- <section id="trending" class="section">
+        <div class="section-header">
+            <h2>Trending News</h2>
+            <p>Stay updated with the hottest news stories across the globe.</p>
+        </div>
+        <div class="trending-list">
+            <div class="trending-item">#TechnologyBreakthrough</div>
+            <div class="trending-item">#StockMarketSurge</div>
+            <div class="trending-item">#GlobalHealth</div>
+            <div class="trending-item">#Olympics2024</div>
+            <div class="trending-item">#FilmAwards</div>
+            <div class="trending-item">#PoliticalDebates</div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Intelligent News Curator | All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="news.js"></script>
+    <!-- <script src="news2.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+    <script>
+        // Toggle the visibility of the sub-navbar
+        document.getElementById('categories-toggle').addEventListener('click', function() {
+            const subNavbar = document.getElementById('sub-navbar');
+            subNavbar.style.display = subNavbar.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+    
+</body>
+</html>
