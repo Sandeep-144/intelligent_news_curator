@@ -49,7 +49,7 @@ app.use(express.static('public'));
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'S@2004#pmC',
+  password: 'password',
   database: 'newsapp'
 });
 
