@@ -1,0 +1,737 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000; /* Dark grey background */
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1e90ff; /* Blue hover effect */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('news-background.jpg'); /* Add a relevant background image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.get-started-btn {
+    background-color: #1e90ff;
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.get-started-btn:hover {
+    background-color: #fff;
+    color: #1e90ff;
+    transition: 0.3s ease;
+}
+
+/* Section styling */
+.section {
+    padding: 60px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1e90ff;
+}
+
+.section-header p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Category styling */
+.category-list, .trending-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category-item, .trending-item {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.category-item:hover, .trending-item:hover {
+    background-color: #1e90ff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* News Section */
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.news-article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-article:hover {
+    transform: translateY(-10px);
+}
+
+.news-article h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.news-article p {
+    font-size: 14px;
+    color: #555;
+}
+
+.news-article a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-article a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive styles */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .get-started-btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+
+    .navbar .nav-links li {
+        margin-left: 10px;
+    }
+
+    .news-article {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .category-item, .trending-item {
+        width: 120px;
+        padding: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .get-started-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .category-list, .trending-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-item, .trending-item {
+        width: 100%;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .news-article {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+/* Container styles for forms */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container button {
+    padding: 10px;
+    background-color: #1e90ff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container button:hover {
+    background-color: #fff;
+    color: #1e90ff;
+    transition: 0.3s ease;
+}
+
+.container p {
+    margin-top: 10px;
+}
+
+.container a {
+    color: #1e90ff;
+}
+
+/* Basic Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.auth-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #0056b3;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        right: 0;
+        background-color: #333;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+}
+
+/* Sub Navbar Styles */
+.sub-navbar {
+    background-color: #444;
+    padding: 0.5rem;
+}
+
+.sub-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.sub-navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Category Slider */
+.category-slider {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+.categories {
+    display: inline-flex;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.categories span {
+    color: white;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.categories span:hover {
+    background-color: #ff6f61;
+}
+
+/* Hide Scrollbar */
+.category-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Basic reset and layout styles */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Search bar styling */
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.search-bar {
+    padding: 8px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Authentication buttons styling */
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #1e90ff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.auth-buttons button:hover {
+    background-color: #1e90ff;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Category slider styling */
+.category-slider {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.categories {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.categories span {
+    background-color: #444;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.categories span:hover {
+    background-color: #555;
+}
+
+/* Custom scrollbar styling */
+.categories::-webkit-scrollbar {
+    height: 6px;
+}
+
+.categories::-webkit-scrollbar-track {
+    background: #333;
+}
+
+.categories::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.categories::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+    .search-container {
+        justify-content: flex-start;
+    }
+}
+
+/* Search Bar Flex Container */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between input and button */
+    width: 100%;
+    max-width: 500px; /* Limit width */
+    margin: 20px auto; /* Center align the search bar */
+}
+
+/* Search Input Field */
+.news-input {
+    padding: 8px 15px;
+    font-size: 14px; /* Smaller text size */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 20px; /* Rounded corners */
+    width: 80%; /* Make the input take up most of the space */
+    max-width: 400px; /* Limit the maximum width */
+}
+
+.news-input:focus {
+    outline: none;
+    border-color: #1e90ff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.8); /* Blue glow effect */
+}
+
+/* Search Button */
+.search-button {
+    background-color: #1e90ff; /* Blue background */
+    color: white; /* White text color */
+    font-size: 14px; /* Smaller font size */
+    padding: 8px 16px; /* Padding inside the button */
+    border: none;
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+}
+
+.search-button:hover {
+    background-color: #187bcd; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.search-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.8); /* Blue glow effect when focused */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-bar {
+        gap: 5px; /* Smaller gap between input and button on smaller screens */
+    }
+
+    .news-input {
+        font-size: 13px; /* Adjust input text size */
+    }
+
+    .search-button {
+        font-size: 13px; /* Adjust button text size */
+        padding: 7px 14px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Style the image */
+.news-article .news-image {
+    width: 100%;
+    max-height: 200px; /* Adjust based on your layout */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.news-article .news-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Makes sure the image covers the area without distortion */
+}
+
+/* Optional: Styling for the news article container */
+.news-article {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Smaller Button Styling */
+button {
+    background-color: #007bff; /* Primary blue background */
+    color: white; /* Text color */
+    font-size: 12px; /* Smaller font size */
+    padding: 6px 12px; /* Reduced padding for smaller button */
+    border: none; /* Remove the default border */
+    border-radius: 4px; /* Slightly smaller rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Active State */
+button:active {
+    background-color: #003d7a; /* Even darker blue when the button is clicked */
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+/* Focus State */
+button:focus {
+    outline: none; /* Remove the focus outline */
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5); /* Add a subtle blue glow */
+}
+
+/* Basic modal styling */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Black with transparency */
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#related-news {
+    margin-top: 20px;
+}
+
+#related-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

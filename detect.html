@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🕵️‍♂️ Fact Scan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- External CSS (if any) -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    /* Fact Scan styles */
+    .factscan-container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    textarea {
+      width: 80%;
+      height: 100px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 30px;
+      text-align: left;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .fact {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─────── Navbar (same as index.html) ─────── -->
+  <nav class="navbar">
+    <div class="logo">News Curator</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-item">Back</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
+  </nav>
+
+  <!-- ─────── Fact Scan Section ─────── -->
+  <div class="factscan-container">
+    <h1>🔍 Fact Scan</h1>
+    <p>Enter facts to verify:</p>
+
+    <textarea id="newsInput" placeholder="e.g. COVID vaccine causes infertility"></textarea><br>
+    <button id="checkBtn">Check Facts</button>
+
+    <div id="result"></div>
+  </div>
+
+  <!-- Script files -->
+  <script src="script.js"></script> <!-- If needed for navbar -->
+  <script src="detect.js"></script>
+  <script src="final_script.js"></script>
+</body>
+</html>

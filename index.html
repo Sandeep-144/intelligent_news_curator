@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Intelligent News Curator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Intelligent News Curator</div>
+        
+        <!-- Search bar in the center -->
+        <div class="search-bar flex">
+            <input id="search-text" type="text" class="news-input" placeholder="e.g. Science" />
+            <button id="search-button" class="search-button">Search</button>
+        </div>
+
+        <!-- Navigation links -->
+        <ul class="nav-links">
+            <li><a href="#trending" class="nav-item" id="trending-link">Trending</a></li>
+            <li><a href="detect.html" class="nav-item" id="factscan-link">FactScan</a></li>
+        </ul>
+
+        <!-- Auth buttons -->
+        <div class="auth-buttons">
+            <button type="button" id="signup" onclick="window.location.href='signup.html'">Sign Up</button>
+            <button type="button" id="signin" onclick="window.location.href='signin.html'">Sign In</button>
+            <button type="button" id="logout" style="display: none;">Logout</button>
+            <button type="button" id="profile" style="display: none;" onclick="window.location.href='profile.html'">Profile</button>
+        </div>
+
+        <!-- Hamburger menu -->
+        <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
+    </nav>
+
+    <!-- Category Slider -->
+    <div class="category-slider">
+        <div class="categories">
+            <span class="category" data-category="india">India</span>
+            <span class="category" data-category="general">World</span>
+            <span class="category" data-category="business">Business</span>
+            <span class="category" data-category="technology">Technology</span>
+            <span class="category" data-category="sports">Sports</span>
+            <span class="category" data-category="health">Health</span>
+            <span class="category" data-category="entertainment">Entertainment</span>
+            <span class="category" data-category="science">Science</span>
+            <span class="category" data-category="politics">Politics</span>
+            <span class="category" data-category="geo-politics">Geo-Politics</span>
+            <span class="category" data-category="politics">Politics</span>
+            <span class="category" data-category="crime">Crime</span>
+            <span class="category" data-category="politics">Politics</span>
+            <span class="category" data-category="travel">Travel</span>
+            <span class="category" data-category="food">Food</span>
+            <span class="category" data-category="finance">Finance</span>
+            <span class="category" data-category="environment">Environment</span>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home" class="section hero">
+        <div class="hero-content">
+            <h1>Welcome to Intelligent News Curator</h1>
+            <p>Your personalized news aggregator, delivering the latest and most relevant content just for you!</p>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-container"></section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Intelligent News Curator | All rights reserved.</p>
+    </footer>
+
+    <!-- Only load final_script.js to avoid conflicts -->
+    <script src="final_script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
